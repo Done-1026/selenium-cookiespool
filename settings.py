@@ -1,8 +1,3 @@
-DRIVER_PATH = r'D:\DownLoad\chromedriver_win32\chromedriver.exe'
-HEADLESS = False
-LOGIN_URL = r'https://weibo.com/'
-ACCOUTS = {'yxd1026@163.com': '628175175'}
-
 USERAGETNS = [
     "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; AcooBrowser; .NET CLR 1.1.4322; .NET CLR 2.0.50727)",
     "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; Acoo Browser; SLCC1; .NET CLR 2.0.50727; \
@@ -56,3 +51,13 @@ USERAGETNS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 \
     Safari/537.36",
     ]
+
+# Path of webdriver
+#DRIVER_PATH = r'D:\DownLoad\chromedriver_win32\chromedriver.exe'
+DRIVER_PATH = r'/Volumes/D/pythoncode/webdriver/chromedriver'
+# Whether use the model of headless.
+HEADLESS = False
+# The login page's url.
+LOGIN_URL = r'https://weibo.com/'
+# ACCOUNTS for logining ,it should be a dict that key is username and value is password.
+ACCOUTS = {'yxd1026@163.com': '628175175',}
