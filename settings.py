@@ -51,13 +51,24 @@ USERAGETNS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 \
     Safari/537.36",
     ]
-
+# log settings
+LOG_PATH = 'login.log'
+LOG_MODE = 'w'
 # Path of webdriver
-#DRIVER_PATH = r'D:\DownLoad\chromedriver_win32\chromedriver.exe'
-DRIVER_PATH = r'/Volumes/D/pythoncode/webdriver/chromedriver'
-# Whether use the model of headless.
-HEADLESS = False
+DRIVER_PATH = r'D:\DownLoad\chromedriver_win32\chromedriver.exe'
+#DRIVER_PATH = r'/Volumes/D/pythoncode/webdriver/chromedriver'
+# Whether use the mode of headless.
+HEADLESS = True
 # The login page's url.
 LOGIN_URL = r'https://weibo.com/'
 # ACCOUNTS for logining ,it should be a dict that key is username and value is password.
-ACCOUTS = {'yxd1026@163.com': '628175175',}
+ACCOUTS = {'yxd1026@163.com': '628175175'}
+# You can get element by id/xpath/link text/partial link text/name/tag name/class name/css selector.
+LOGIN_ELEMENT = {
+    'username': {'by': 'id', 'value': 'loginname'},
+    'password': {'by': 'xpath', 'value': r'//input[@type="password"]'},
+    'login_button': {'by': 'xpath', 'value': r'//div[@class="info_list login_btn"]/a'},
+    'slider': {'by': 'id', 'value': 'nc_1_n1z'}
+}
+IDCODE_TYPE = 'slider'
+IDCODE_CRACK = {'slider': 'simple_slider'}
